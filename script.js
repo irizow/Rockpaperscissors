@@ -16,7 +16,7 @@ let computerScore = 0
 
 
 
-function playRound () {
+function playRound() {
     let playerChoice = (prompt("Rock, paper or Scissors?").toLowerCase());
     let computerChoice = getComputerChoice()
 
@@ -27,22 +27,22 @@ function playRound () {
     else if (computerChoice === "rock") {
         if (playerChoice === "scissors") {
           alert ("You have lost... This computer uses it's rock to destroy your blades");
-          return computerScore = computerScore + 1;
+          return computerScore++;
         } else {
           if (playerChoice === "paper")
             alert("You win! You asphyxiate that rock with your paper");
-            return playerScore = playerScore + 1;
+            return playerScore++;
         } 
 
     }
     else if (computerChoice === "paper") {
         if (playerChoice === "scissors") {
               alert("You win... You cut the computer into tiny pieces with your scissors");
-              return playerScore = playerScore + 1 ;
+              return playerScore++;
         } else {
               if (playerChoice === "rock")
                 alert("You lose this time! the paper wraps you and isolates you from the world");
-                return computerScore = computerScore + 1;  
+                return computerScore++;  
             }
     }        
 
@@ -50,19 +50,19 @@ function playRound () {
     else if ( computerChoice === "scissors") {
         if (playerChoice === "paper") {
             alert("You've lost, the computer quickly discombabulates you");
-            return computerScore = computerScore + 1;  
+            return computerScore++;  
         } else {
             if (playerChoice === "rock")
             alert("You win! you smash those scissors in a second");
-            return playerScore = playerScore + 1 ;  
+            return playerScore++;  
         }
     }
 }
 
 
 function game() {
-while (computerScore < 3 && playerScore < 3) {
-    playRound() }
+for (; computerScore < 3 || playerScore < 3;) {
+    playRound() 
     if (playerScore === 3) {
         return alert ("Wow! you've beaten the machine 3 times!");
     }
@@ -70,6 +70,7 @@ while (computerScore < 3 && playerScore < 3) {
     else if (computerScore === 3) {
         return alert ("Computer won 3 times: What a loser, you cannot even win in a child's game like this one");
     }
+}
 
 }
 
