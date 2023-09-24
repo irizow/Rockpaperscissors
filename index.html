@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
-
-</head>
-<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&family=Orbitron:wght@400;600;800;900&display=swap');
+        </style>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+          var context = new AudioContext();
+        }
+        </script>
     
+    
+</head>
+<body onload = "typeWriter()">
+    <section class="intro">
+        <video class="introvideo" width="700px" height="700px" muted autoplay loop>
+          <source src="images/videointro.mp4" type="video/mp4">
+    
+        </video>
+        <audio class="typingSound" src="images/typingsound.mp3"></audio>
+        <div class="overlay">
+            <p class="story"></p> 
+            <button class="startbutton">FIGHT</button>
+            <audio class="startSound" src="images/playsound.mp3"></audio>
+        </div>
+    </section>
+    
+
+    <section class="content">
+    <div class="game">
+        <p id="prompt">Choose your weapon carefully</p>
+        <div class="winnerpopup">
+            <div class="winnerpopupcontent">
+                <p id="winner"></p>
+                <button class="startover">Start over</button>
+            </div>
+        </div>
+
+      <audio class="soundhover" src="images/buttonhover.mp3"></audio>
+      <div class="buttons">
+        <div class="container">
+            <img class="icon" id="rock" src="images/rock-paper-scissors-296854_1280.png">
+        </div>
+        <div class="container">
+            <img class="icon" id="paper" src="images/rock-paper-scissors-296855_1280.png">
+        </div>
+        <div class="container">
+            <img class="icon" id="scissors" src="images/rock-paper-scissors-296853_1280.png">
+        </div>
+       </div>
+      <div class="scorecounter">
+        <p class="scores" id="playerscore">Your Score: 0</p>
+        <p class="scores" id="computerscore">Computer Score: 0</p>
+      </div>   
+    </div>
+
+    <audio class="computerLost" src="images/computerlose.mp3"></audio>
+    <audio class="playerLost" src="images/humanlost.mp3"></audio>
+
+</section>
+    <script src="script.js"></script>
 </body>
 </html>

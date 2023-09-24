@@ -1,0 +1,190 @@
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: green;
+    font-family: "Orbitron", "sans-serif", "Noto Sans KR";
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* intro layout*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling while the intro is displayed */
+}
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url("images/wallpaper3.jpg");
+}
+
+.introvideo {
+    width: 1020px;
+    height: 750px;
+    z-index: 1;
+    position: relative;
+       
+}
+
+.overlay {
+    top: 5%;
+    left: 20%;
+    position: absolute;
+    z-index: 10000;
+    font-size: 24px;
+    font-weight: bolder;
+    width: 60%;
+    text-align: center;
+    gap: 200px;
+}
+
+.startbutton {
+    background-color: rgb(100, 255, 229);
+    color: black;
+    width: 30%;
+    font-size: 30px;
+    align-self: center;
+    border: 3px solid black;
+    font-family: "Orbitron", "sans-serif";
+    letter-spacing: 10px;
+    position: fixed;
+    bottom: 15%;
+    right: 34%;
+}
+
+.startbutton:hover {
+    color: rgb(100, 255, 229);
+    background-color: black;
+    border: 3px solid rgb(100, 255, 229);
+    }
+
+.story {
+    background-color: rgba(0, 0, 0, 0.644);
+    padding: 10px;
+    color: rgb(100, 255, 229);
+    font-weight: 200;
+}
+ 
+/* main */
+
+.game {
+    
+    background-image: url("images/Hi\ I\ want\ a\ fantasy\ \(2\).jpg");
+    width: 680px;
+    height: 680px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    gap: 70px;
+    position: fixed;
+    bottom:7%;
+}
+.container {
+    border: 3px solid rgb(159, 36, 200);
+    width: 100px;
+    height: 100px;
+}
+
+.container:hover {
+    border: 4px solid rgb(100, 255, 229);
+}
+
+.icon {
+    
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(311deg) brightness(110%) contrast(101%);
+    
+}
+
+#prompt {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 100px;
+    letter-spacing: 4px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Initially hide the content */
+    position: relative;
+    z-index: 11000; /* Make the content appear above the intro when shown */
+}
+
+
+
+.scores {
+    color: white;
+}
+    
+
+
+/*winner pop up*/
+
+.winnerpopup{
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.575);
+    top: 20%;
+    left: 0%;
+    height: 50%;
+    width: 100%;
+    
+}
+
+.winnerpopupcontent {
+    position: absolute;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.startover {
+    height: 100px;
+    width: 200px;
+    background: linear-gradient( rgb(123, 58, 167), rgb(100, 255, 229));
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: "Orbitron", "Verdana", "sans-serif";
+    align-self: center;
+}
+
+#winner {
+    color: rgb(100, 255, 229);
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
